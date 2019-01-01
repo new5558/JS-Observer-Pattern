@@ -41,8 +41,11 @@ let btnsSubscribe = document.querySelectorAll(".subscribe");
 let btnsUnsubscribe = document.querySelectorAll(".unsubscribe");
 
 // please fix subscribe button
-// btnsSubscribe.forEach(element => {
-    // element.addEventListener('click', e => observer.subscribe());
-// });
+btnsSubscribe.forEach(element => {
+    element.addEventListener('click', e => observer.subscribe(update.bind(element)));
+});
 
 // please add unsubscribe buttin
+btnsUnsubscribe.forEach(element => {
+    element.addEventListener('click', e => observer.unsubscribe(update.bind(element)));
+});
