@@ -41,11 +41,11 @@ let btnsSubscribe = document.querySelectorAll(".subscribe");
 let btnsUnsubscribe = document.querySelectorAll(".unsubscribe");
 
 // please fix subscribe button
-btnsSubscribe.forEach(element => {
-    element.addEventListener('click', e => observer.subscribe(update.bind(element)));
+btnsSubscribe.forEach((element, index) => {
+    element.addEventListener('click', e => observer.subscribe(update.bind(textbox[index])));
 });
 
-// please add unsubscribe buttin
-btnsUnsubscribe.forEach(element => {
-    element.addEventListener('click', e => observer.unsubscribe(update.bind(element)));
+// please add unsubscribe button
+btnsUnsubscribe.forEach((element, index) => {
+    element.addEventListener('click', e => observer.unsubscribe(update.bind(textbox[index])));
 });
